@@ -1,26 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
+import { Routes, Route } from "react-router-dom";
+import Search from "./templates/Search";
 import "./App.css";
+import Navigation from "./organisms/Navigation";
+import { SearchContext } from "./SearchContext";
+import Landing from "./templates/Landing";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="h-screen">
+            <Navigation />
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/search" element={<Search />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

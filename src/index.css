@@ -11,6 +11,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+label {
+  color: theme("colors.dark-cyan");
+}
+
+a {
+  color: theme("colors.blue-lagoon");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
